@@ -1,7 +1,8 @@
 {
   "expo": {
-    "name": "HelloWorld",
-    "slug": "notifica",
+    "sdkVersion": "37.0.0",
+    "name": "AulaMovel",
+    "slug": "AulaMovel",
     "platforms": [
       "ios",
       "android",
