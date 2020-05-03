@@ -1,12 +1,12 @@
 import React from 'react';
-import {Text , View} from 'react-native';
+import {VieW, TexT} from '../style/styles'
 
 export default function Header(){
     return(
-        <View>
-            <Text>
-                O componente esta funcionado
-            </Text>
-        </View>
+        <VieW>
+            <TexT>
+                O componente esta funcidonado
+            </TexT>
+        </VieW>
     )
 }
