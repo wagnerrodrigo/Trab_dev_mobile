@@ -1,4 +1,5 @@
 import firebase from 'firebase';
+import firestore from 'firebase/firestore';
 
 var firebaseConfig = {
     apiKey: "AIzaSyDt3EVOo7XOrY3GHr-qNiP-7YdS5IQHHnQ",
@@ -11,10 +12,10 @@ var firebaseConfig = {
     measurementId: "G-CX8L5EZEYJ",
 };
 // Initialize Firebase
+if (!firebase.apps.length) {
+    firebase.initializeApp(firebaseConfig);
 
-    if(!firebase.app.length){
-firebase.initializeApp(firebaseConfig);
-   //    }   
-   }
+}
 
-   export default firebase;
+
+export default firebase;
