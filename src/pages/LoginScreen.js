@@ -1,8 +1,6 @@
 import React from 'react';
 import { View, TextInput, Button } from 'react-native'; 
 import firebase from '../database/Firebase';
-import { Fab } from '../style/styles';
-// import firebase from 'firebase';
 
 export default class LoginScreen extends React.Component {
 
@@ -15,22 +13,25 @@ export default class LoginScreen extends React.Component {
         }
     }
     
-    componentDidMount() {
-//      var firebaseConfig = {
-//        apiKey: "AIzaSyDt3EVOo7XOrY3GHr-qNiP-7YdS5IQHHnQ",
-//        authDomain: "notifica-a3d65.firebaseapp.com",
-//        databaseURL: "https://notifica-a3d65.firebaseio.com",
-//        projectId: "notifica-a3d65",
-//        storageBucket: "notifica-a3d65.appspot.com",
-//        messagingSenderId: "1083664168744",
-//        appId: "1:1083664168744:web:f885364c052c28f086821d",
-//        measurementId: "G-CX8L5EZEYJ",
-//      };
-//       // Initialize Firebase
 
-//     //    if(!firebase.app.length){
-//             firebase.initializeApp(firebaseConfig);
-//    //    }   
+
+    componentDidMount() {
+         firebase
+           .auth()
+           .signInWithEmailAndPassword(
+             "wagnerrodrigo.pan@gmail.com",
+             "123456789"
+           )
+           .then((user) => {
+             console.log("usuario logado ", user);
+           })
+           .catch((error) => {
+             console.log("erro ", error);
+           })
+           .finally(() => {
+             console.log("terminou");
+           });
+        
      }
 
 
@@ -74,7 +75,6 @@ export default class LoginScreen extends React.Component {
                    title="Entrar" 
                    onPress={()=>this.tryLogin()}/>
 
-                   <Fab/>
             </View>    
         );
     }
