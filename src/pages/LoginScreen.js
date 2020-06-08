@@ -71,7 +71,7 @@ export default class LoginScreen extends React.Component {
                             onChangeText={(value)=>this.onChangePassword(value)}
                                 />
                 <Button 
-                   color="#4473ba" 
+                   color="#856084" 
                    title="Entrar" 
                    onPress={()=>this.tryLogin()}/>
             </View>    
