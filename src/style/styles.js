@@ -17,12 +17,26 @@ export const ViewItem = styled.View`
   border-bottom-width: 2px;
   border-bottom-color: black;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
+`;
+export const FakeImage = styled.Image`
+  height: 50px;
+  width: 50px;
+  border-radius: 200px;
+  justify-content: center;
+  align-items: center;
+  background-color: #f4c31e;
+  margin-left: ${(props) => props.maginLeft || 10};
+`;
+
+export const LineText = styled.Text`
+  font-size: ${(props) => props.fontSize || 30};
+  margin-left: ${(props) => props.maginLeft || 10};
 `;
 
 export const TexT = sytled.Text`
-    font-size: 30px;
+    font-size: ${(props) => props.fontSize || 30};
     color: white;
 `;
 
