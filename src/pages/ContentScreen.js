@@ -51,12 +51,17 @@ export default class ContentScreen extends React.Component {
   render() {
     this.renderActivityIndicator();
     const { contents } = this.state;
-    const itens = contents.map((content, index) => <ContentItem/>);
+    const itens = contents.map((content, index) => (
+      <ContentItem
+        name={content.name}
+        desc={content.desc}
+        img={content.img}
+        id={content.id}
+      />
+    ));
 
     return (
       <VieW>
-        <Text>OS ITENS DO BANCO SERÁ RENDERIZADO ABAIXO</Text>
-
         <Fab>
           <TexT>+</TexT>
         </Fab>
