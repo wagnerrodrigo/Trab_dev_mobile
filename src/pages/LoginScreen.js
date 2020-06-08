@@ -74,7 +74,6 @@ export default class LoginScreen extends React.Component {
                    color="#4473ba" 
                    title="Entrar" 
                    onPress={()=>this.tryLogin()}/>
-
             </View>    
         );
     }
