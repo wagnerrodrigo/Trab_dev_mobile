@@ -12,6 +12,15 @@ export const VieW = sytled.View`
     margin-bottom: ${(props) => props.marginbottom || 0};
 `;
 
+export const ViewItem = styled.View`
+  height: 60px;
+  border-bottom-width: 2px;
+  border-bottom-color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
+
 export const TexT = sytled.Text`
     font-size: 30px;
     color: white;
