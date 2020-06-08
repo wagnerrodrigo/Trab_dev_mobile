@@ -15,15 +15,10 @@ export default function App() {
         <Stack.Screen
           name="ContentScreen"
           component={ContentScreen}
-        />
-
-        <Stack.Screen
-          name="LoginScreen"
-          component={LoginScreen}
           options={{
             title: "My App",
             headerStyle: {
-              backgroundColor: "#3f68d1",
+              backgroundColor: "#856084",
               borderBottomColor: "#fff",
               borderBottomWidth: 1,
             },
@@ -32,7 +27,23 @@ export default function App() {
               fontSize: 30,
             },
           }}
-          
+        />
+
+        <Stack.Screen
+          name="LoginScreen"
+          component={LoginScreen}
+          options={{
+            title: "My App",
+            headerStyle: {
+              backgroundColor: "#856084",
+              borderBottomColor: "#fff",
+              borderBottomWidth: 1,
+            },
+            headerTitleStyle: {
+              color: "#fff",
+              fontSize: 30,
+            },
+          }}
         />
       </Stack.Navigator>
     </NavigationContainer>
