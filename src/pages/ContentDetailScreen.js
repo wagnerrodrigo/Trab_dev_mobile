@@ -3,7 +3,7 @@ import { View, TextInput, Button, Alert } from "react-native";
 //import firebase from '../database/Firebase'
 import Sqlite from "../database/Sqlite";
 
-import { ScrollVieW } from "../styles/styles";
+import { ScrollVieW } from "../style/styles";
 
 import { useRoute } from "@react-navigation/native";
 import { useNavigation } from "@react-navigation/native";
@@ -109,14 +109,14 @@ class ContentDetailScreen extends React.Component {
         />
         <ScrollVieW>
           <Button
-            color="#4473ba"
+            color="#289567"
             title="Salvar"
             onPress={() => this.updateContent()}
           />
         </ScrollVieW>
         <ScrollVieW>
           <Button
-            color="#4473ba"
+            color="red"
             title="Apagar"
             onPress={() => this.deleteContent()}
           />
