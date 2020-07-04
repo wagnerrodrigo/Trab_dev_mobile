@@ -16,7 +16,7 @@ export default class Sqlite {
 
     db.transaction((tx) => {
       tx.executeSql(
-        "CREATE TABLE IF NOT EXISTS Content (id integer primary key, name, desc, img)"
+        "CREATE TABLE IF NOT EXISTS Content (id integer primary key AUTOINCREMENT, name, desc, img)"
       );
     });
 
@@ -36,8 +36,7 @@ export default class Sqlite {
 
       db.transaction((tx) => {
         tx.executeSql(
-          "SELECT c.id, c.name, c.img, c.desc FROM Content c",
-          [],
+          "SELECT c.id, c.name, c.img, c.desc FROM Content c",[],
           (_, { rows }) => {
             console.log("Retornou corretamente", rows);
 

@@ -50,7 +50,7 @@ class ContentScreen extends React.Component {
  */
 
   contentUpdate() {
-    console.log("contentUpdate");
+   console.log("contentUpdate");
     let contents = [];
 
     db.listContents(database)
@@ -88,10 +88,10 @@ class ContentScreen extends React.Component {
 
     const items = contents.map((content, index) => (
       <ContentItem
-        name={content.name}
-        desc={content.desc}
-        img={content.img}
         id={content.id}
+        desc={content.desc}
+        name={content.name}
+        img={content.img}
         onPress={() =>
           navigation.navigate("ContentDetailScreen", {
             id: content.id,

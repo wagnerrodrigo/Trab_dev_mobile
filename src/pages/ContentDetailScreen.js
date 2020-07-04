@@ -3,7 +3,7 @@ import { View, TextInput, Button, Alert } from "react-native";
 //import firebase from '../database/Firebase'
 import Sqlite from "../database/Sqlite";
 
-import { ScrollVieW } from "../style/styles";
+import { ScrollVieW, TextInpuT } from "../style/styles";
 
 import { useRoute } from "@react-navigation/native";
 import { useNavigation } from "@react-navigation/native";
@@ -43,6 +43,7 @@ class ContentDetailScreen extends React.Component {
 
     db.updateContent(id, data, database);
     navigation.navigate("ContentScreen");
+    Alert.alert("Campos editados !!!","clique no ok para continuar");
 
     /*    
     firebase.firestore().collection('contents').doc(id).set(
@@ -72,6 +73,7 @@ class ContentDetailScreen extends React.Component {
 
     db.deleteContent(id, database);
     navigation.navigate("ContentScreen");
+    Alert.alert("Dados apagados","clique no OK para continuar");
 
     /*
     firebase.firestore().collection('contents').doc(id).delete()
@@ -95,16 +97,19 @@ class ContentDetailScreen extends React.Component {
   render() {
     return (
       <View>
-        <TextInput
+        <TextInpuT
           value={this.state.name}
+          placeholder="nome"
           onChangeText={(value) => this.onChangeTextInput(value, "name")}
         />
-        <TextInput
+        <TextInpuT
           value={this.state.desc}
+          placeholder="descrição"
           onChangeText={(value) => this.onChangeTextInput(value, "desc")}
         />
-        <TextInput
+        <TextInpuT
           value={this.state.img}
+          placeholder="img"
           onChangeText={(value) => this.onChangeTextInput(value, "img")}
         />
         <ScrollVieW>
@@ -116,7 +121,7 @@ class ContentDetailScreen extends React.Component {
         </ScrollVieW>
         <ScrollVieW>
           <Button
-            color="red"
+            color="#fc6771"
             title="Apagar"
             onPress={() => this.deleteContent()}
           />

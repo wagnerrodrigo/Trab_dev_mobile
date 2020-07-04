@@ -2,6 +2,7 @@ import React from 'react';
 import { View, TextInput, Button, Alert } from 'react-native'; 
 //import firebase from '../database/Firebase'
 import Sqlite from '../database/Sqlite';
+import { TextInpuT, ButtoNd } from "../style/styles";
 
 import { useRoute } from '@react-navigation/native';
 import { useNavigation } from '@react-navigation/native';
@@ -62,27 +63,29 @@ class SecondScreen extends React.Component {
   render(){
     return (
       <View>
-                <TextInput placeholder="Nome"
-                           value={this.state.name}
-                           onChangeText={(value)=>this.onChangeTextInput(value, 'name')}
-                           
-                           />
-                <TextInput placeholder="Descrição"
-                          multiline={true}
-                          numberOfLines={4}
-                            value={this.state.desc}
-                            onChangeText={(value)=>this.onChangeTextInput(value, 'desc')}
-                                />
-                <TextInput placeholder="Imagem"
-                            value={this.state.img}
-                            onChangeText={(value)=>this.onChangeTextInput(value, 'img')}
-                                />                
-                  <Button 
-                   color="#4473ba" 
-                   title="Salvar" 
-                   onPress={()=>this.saveContent()}/>
-
-            </View>    
+        <TextInpuT
+          placeholder="Nome"
+          value={this.state.name}
+          onChangeText={(value) => this.onChangeTextInput(value, "name")}
+        />
+        <TextInpuT
+          placeholder="Descrição"
+          multiline={true}
+          numberOfLines={4}
+          value={this.state.desc}
+          onChangeText={(value) => this.onChangeTextInput(value, "desc")}
+        />
+        <TextInpuT
+          placeholder="Imagem"
+          value={this.state.img}
+          onChangeText={(value) => this.onChangeTextInput(value, "img")}
+        />
+        <ButtoNd
+          color="#289567"
+          title="Salvar"
+          onPress={() => this.saveContent()}
+        />
+      </View>
     );
   }  
 }

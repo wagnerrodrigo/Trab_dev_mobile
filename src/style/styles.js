@@ -12,7 +12,11 @@ export const VieW = styled.View`
 `;
 
 export const ScrollVieW = styled.ScrollView`
-  padding: 5px;
+  padding-bottom: 2px;
+  padding-top: 20px;
+  margin-left:  50px;
+  margin-right: 50px;
+  
 `;
 
 export const ViewItem = styled.View`
@@ -55,13 +59,28 @@ export const LineText = styled.Text`
 export const Fab = styled.TouchableOpacity`
   height: 60px;
   width: 60px;
-  border-radius: 22px;
+  border-radius: 20px;
   position: absolute;
   bottom: 20px;
   right: 20px;
   justify-content: center;
   align-items: center;
   background-color: #856084;
-  border: 10px;
-  border-color: rgba(233,55,233,0.3);
+  border: 5px;
+  border-color: rgba(5, 249, 114, 0.5);
+`;
+export const TextInpuT = styled.TextInput`
+  padding: 15px;
+  border-bottom-width: 0.7px;
+  border-bottom-color: #856084;
+  shadow-opacity: 0.8;
+  font-size: 20px;
+  justify-content: center;
+  align-items: center;
+`;
+export const ButtoNd = styled.Button`
+  padding-bottom: 2px;
+  padding-top: 20px;
+  margin-left:  50px;
+  margin-right: 50px;
 `;

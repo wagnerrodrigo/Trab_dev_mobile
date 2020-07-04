@@ -10,7 +10,7 @@ import {
 //import firebase from 'firebase';
 import firebase from "../database/Firebase";
 import { useNavigation } from "@react-navigation/native";
-
+import { TextInpuT } from "../style/styles";
 class LoginScreen extends React.Component {
   constructor(props) {
     super(props);
@@ -70,12 +70,12 @@ class LoginScreen extends React.Component {
   render() {
     return (
       <View>
-        <TextInput
+        <TextInpuT
           placeholder="user@email.com"
           value={this.state.mail}
           onChangeText={(value) => this.onChangeMail(value)}
         />
-        <TextInput
+        <TextInpuT
           placeholder="******"
           value={this.state.password}
           secureTextEntry
